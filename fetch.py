@@ -78,7 +78,7 @@ def fetch(query):
     answerorig = anssoup.findAll(
         attrs={'class': 'text-sm text-red-500'})[0]  # 更直接一点
     answer = answerorig.text.replace("参考答案：", '')
-    # 这里多走一步,把符号改成数字了
+    # 这里多走一步,把符号改成字了
     yes_or_no = {"√": "正确", "×": "错误"}
     if answer in yes_or_no.keys():
         answer = yes_or_no[answer]
